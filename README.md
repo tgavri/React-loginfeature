@@ -1,6 +1,6 @@
-# TestApp
+# TestApp 
 
-A React Native application that provides user authentication using Firebase, allowing users to sign up, sign in with email/password or Google, and manage their notes.
+A React Native application that provides user authentication using Firebase, allowing users to sign up, sign in with email/password or Google, manage their notes, and engage in real-time chat with other users.
 
 ## Features
 
@@ -9,6 +9,16 @@ A React Native application that provides user authentication using Firebase, all
 - 📝 Note management for authenticated users
 - 🧭 Intuitive navigation between screens
 - 🔒 Secure Firebase backend integration
+- 💬 Real-time chat functionality
+- 👥 User-to-user messaging
+- 🔔 Push notifications for new messages
+- 🌓 Light/Dark mode support
+- 📱 Platform-specific notifications (Android/iOS)
+- 🔄 Real-time data synchronization
+- 👤 User profile management
+- 📋 Chat history persistence
+- 🔍 User search and selection
+- ⚡ Real-time unread message indicators
 
 ## Prerequisites
 
@@ -17,6 +27,7 @@ A React Native application that provides user authentication using Firebase, all
 - Expo CLI
 - Firebase account
 - Google Cloud Console account (for Google Sign-In)
+- React Native development environment
 
 ## Installation
 
@@ -38,6 +49,8 @@ A React Native application that provides user authentication using Firebase, all
    - Add a web app to your Firebase project
    - Copy your Firebase configuration
    - Replace the configuration in `firebase.js` with your own
+   - Enable Firestore database
+   - Set up Firebase Cloud Messaging for notifications
 
 4. **Configure Google Sign-In:**
    - Set up OAuth 2.0 in the Google Cloud Console
@@ -63,17 +76,42 @@ A React Native application that provides user authentication using Firebase, all
 2. Enter your note in the text input
 3. Click "Save Note" to store it
 
+### Chat Features
+
+1. **Starting a Chat:**
+   - Click the chat icon in the navigation bar
+   - Select a user from the list
+   - Start sending messages
+
+2. **Notifications:**
+   - Receive push notifications for new messages
+   - Tap notifications to open the relevant chat
+   - Manage notification preferences in settings
+
+3. **User Management:**
+   - View and search for other users
+   - Start new conversations
+   - View chat history
+
 ## Project Structure
 
 ```
 TestApp/
 ├── .expo/
 ├── assets/
+├── components/
+│   ├── Chat.js
+│   ├── ChatIcon.js
+│   ├── Messages.js
+│   └── UserSelectionModal.js
+├── services/
+│   └── ChatNotificationService.js
+├── contexts/
+│   ├── AuthContext.js
+│   └── ThemeContext.js
 ├── node_modules/
 ├── .gitignore
 ├── App.js
-├── AuthContext.js
-├── GoogleLogin.js
 ├── firebase.js
 ├── index.js
 ├── login.js
@@ -94,6 +132,8 @@ TestApp/
 - [react](https://reactjs.org/)
 - [react-native](https://reactnative.dev/)
 - [react-native-web](https://necolas.github.io/react-native-web/)
+- [@react-native-firebase/messaging](https://rnfirebase.io/messaging/usage)
+- [@react-native-firebase/firestore](https://rnfirebase.io/firestore/usage)
 
 ## Contributing
 
@@ -109,8 +149,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Firebase for authentication services
-- Google for Sign-In integration
+- Firebase for authentication services and real-time database
+- Google for Sign-In integration and Cloud Messaging
 - React Native community for the amazing ecosystem
 
 
