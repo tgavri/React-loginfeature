@@ -1,4 +1,4 @@
-# TestApp 
+# Login Feature React Native App 
 
 A React Native application that provides user authentication using Firebase, allowing users to sign up, sign in with email/password or Google, manage their notes, and engage in real-time chat with other users.
 
